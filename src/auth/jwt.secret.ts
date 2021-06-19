@@ -1,1 +1,1 @@
-export const secret = process.env.SECRET
+export const secret = 'dsadsaxsa'

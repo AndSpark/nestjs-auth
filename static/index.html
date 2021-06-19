@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <title>Nestjs Chat Real Time</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+</head>
+<body>
+
+<div id="app" class="container">
+
+    <div class="row">
+        <div class="col-md-6 offset-md-3 col-sm-12">
+            <br>
+            <div id="status"></div>
+            <div id="chat">
+                <label for="username">Your Name:</label>
+                <input type="text" v-model="name" id="username" autocomplete="off" class="form-control" placeholder="Enter name...">
+                <br>
+                <button id="send" class="btn" @click.prevent="sendMessage">Send</button>
+            </div>
+        </div>
+    </div>
+		<div id="container"></div> 
+
+</div>
+<script src="https://webapi.amap.com/loader.js"></script>
+
+<script src="main.js"></script>
+
+<style>
+	#messages{
+    height:300px;
+    overflow-y: scroll;
+}
+* {
+	margin: 0;
+}
+#app {
+}
+#container {width:100%; height: 600px; }  
+
+</style>
+</body>
+</html>
